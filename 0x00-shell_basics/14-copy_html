@@ -1,0 +1,2 @@
+#!/bin/bash
+parent_dir=$(dirname $(pwd)); for file in *; do [ ! -f "$parent_dir/$file" ] || [ "$file" -nt "$parent_dir/$file" ] && cp "$file" "$parent_dir/$file" && echo "Copied $file to $parent_dir/$file"; done
